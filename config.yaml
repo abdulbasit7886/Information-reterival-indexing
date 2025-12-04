@@ -1,0 +1,30 @@
+preprocessing:
+  lowercase: true
+  remove_punctuation: true
+  remove_stopwords: true
+  stemming: porter  # Options: porter, snowball, lemmatize, none
+  min_token_length: 2
+  max_token_length: 50
+
+indexing:
+  method: bm25  # Options: bm25, tfidf, hybrid
+  bm25_k1: 1.5
+  bm25_b: 0.75
+  tfidf_norm: l2  # Options: l1, l2, none
+  save_index: true
+
+retrieval:
+  top_k: 10
+  min_score: 0.0
+  query_expansion: false  # Pseudo-relevance feedback
+
+evaluation:
+  metrics: [precision, recall, map, ndcg]
+  k_values: [5, 10, 20]
+  benchmark_queries: 20
+
+paths:
+  raw_data: data/raw
+  processed_data: data/processed
+  index_dir: models/index
+  results_dir: results
