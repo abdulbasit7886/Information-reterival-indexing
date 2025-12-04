@@ -4,7 +4,7 @@ A local Information Retrieval system supporting BM25 and TF-IDF ranking with pre
 
 # Create virtual environment
 python -m venv venv
-.\\venv\\Scripts\\activate
+.\venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
